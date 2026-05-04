@@ -1,0 +1,48 @@
+{
+  "enabledPlugins": {
+    "caveman@caveman": true,
+    "compound-engineering@compound-engineering-plugin": true,
+    "andrej-karpathy-skills@karpathy-skills": true,
+    "last30days@last30days-skill": true
+  },
+  "extraKnownMarketplaces": {
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "compound-engineering-plugin": {
+      "source": {
+        "source": "github",
+        "repo": "EveryInc/compound-engineering-plugin"
+      }
+    },
+    "last30days-skill": {
+      "source": {
+        "source": "github",
+        "repo": "mvanhorn/last30days-skill"
+      }
+    },
+    "karpathy-skills": {
+      "source": {
+        "source": "github",
+        "repo": "forrestchang/andrej-karpathy-skills"
+      }
+    }
+  },
+  "effortLevel": "high",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -f tasks/lessons.md ] && printf '\\n=== PROJECT LESSONS ===\\n' && cat tasks/lessons.md && printf '====================\\n' || true"
+          }
+        ]
+      }
+    ]
+  }
+}
